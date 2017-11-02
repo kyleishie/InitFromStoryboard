@@ -1,6 +1,4 @@
 # InitFromStoryboard
-A UIViewController extension to make instantiating from storyboards easier.
-
 InitFromStoryboard allows safe and easy access to UIViewControllers within UIStoryboards without all of the boiler plate code or type checking.
 
 #### Installation
