@@ -1,10 +1,20 @@
 # InitFromStoryboard
 InitFromStoryboard allows safe and easy access to UIViewControllers within UIStoryboards without all of the boiler plate code or type checking.
 
+#### Boiler Plate
+
+Here is the code that one could write without InitFromStoryboard.  While this isn't bad it can be easier.
+```swift
+let storyboard = UIStoryboard(name: "OtherStoryboard", bundle: nil)
+if let viewController = storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as? SomeViewController {
+    /// Do something with viewController
+}
+```
+
+
 #### Installation
 
 Add the UIViewController+InitFromStoryboard.swift file to your project. 
-
 
 
 #### Basic Usage:
@@ -34,7 +44,7 @@ The basic usage is great and all, but it assumes you are only working with one s
 let someVC = SomeViewController.initFromStoryboard(storyboardName: "OtherStoryboard")
 ```
 
-This is cool but it requires us to type filename strings a lot and thats not safe, therefore not swift, and also wastes Xcode's handy code-completion feature.  Lets fix this by extending UIStoryboard in order to create filename constants.  Heres an example that assumes you have added an ***OtherStoryboard.storyboard*** file to your project.
+This is cool but it requires us to type filename strings a lot which is just asking for bugs.  Also wastes Xcode's handy code-completion feature.  Lets fix this by extending UIStoryboard in order to create filename constants.  Heres an example that assumes you have added an ***OtherStoryboard.storyboard*** file to your project.
 
 ```swift
 import UIKit
