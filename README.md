@@ -26,7 +26,7 @@ let someVC = SomeViewController.initFromStoryboard()
 ```
 This returns a new instance of SomeViewController, instead of UIViewController, so there is no need to cast it yourself.
 
-Notice that the storyboard identifier is the same as the class name. This is required in order to find the correct scene.
+**Notice that the storyboard identifier is the same as the class name.** This is ***required*** in order to find the correct scene.
 
 But wait... What if you wanted a UINavigationController.  You could embed SomeViewController within a UINavigationController yourself in code, however, there are cases where you want the navCon from the storyboard.  For example, if you have set a custom, non-global barTintColor.  You could do this in code as well or you could do the following:
 
